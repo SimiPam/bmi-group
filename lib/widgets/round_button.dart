@@ -20,8 +20,8 @@ class RoundButton extends StatelessWidget {
           shape: BoxShape.circle,
           color: AppColors.counterButtonColor,
         ),
-        width: 50.0,
-        height: 50.0,
+        width: 60.0,
+        height: 60.0,
         child: Icon(
           iconData,
           color: AppColors.counterIconColor,
