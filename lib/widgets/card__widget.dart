@@ -16,9 +16,8 @@ class CardWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onPress,
       child: Container(
-        margin: EdgeInsets.symmetric(
-          vertical: Sizes.dimens_10,
-          horizontal: Sizes.dimens_6,
+        margin: EdgeInsets.all(
+           Sizes.dimens_10,
         ),
         decoration: BoxDecoration(
           color: AppColors.cardColor,
