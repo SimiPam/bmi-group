@@ -16,7 +16,7 @@ ThemeData myThemeData = ThemeData(
     ));
 
 TextStyle _resultHeading = TextStyle(
-  fontSize: Sizes.dimens_35,
+  fontSize: Sizes.dimens_40,
   letterSpacing: Sizes.dimens_1_3,
   fontWeight: FontWeight.w600,
   color: AppColors.whiteColor,
@@ -51,17 +51,4 @@ TextStyle _resultHeading4 = TextStyle(
   letterSpacing: Sizes.dimens_1_2,
   fontSize: Sizes.dimens_20,
   color: Colors.white,
-);
-
-TextStyle _counterHeading1 = TextStyle(
-  fontWeight: FontWeight.w500,
-  //letterSpacing: Sizes.dimens_1,
-  fontSize: Sizes.dimens_20,
-  color: AppColors.counterTextColor,
-);
-
-TextStyle _counterNumberHeading2 = TextStyle(
-  color: Colors.white,
-  fontWeight: FontWeight.bold,
-  fontSize: Sizes.dimens_50,
 );
