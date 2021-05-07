@@ -24,12 +24,11 @@ enum Gender { male, female }
 class _MyHomePageState extends State<MyHomePage> {
   
   Gender selectedGender = Gender.male;
-  Color activeCardColor = Colors.black;
-  Color inActiveCardColor = Colors.grey;
+
 
   late Timer _timer;
-  var _weight = 0;
-  var _age = 0;
+  int _weight = 0;
+  int _age = 0;
   int height = 180;
 
   void minusTapp() {
@@ -47,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void minusTapDown(TapDownDetails details) {
     _timer = Timer.periodic(Duration(milliseconds: 100), (t) {
       setState(() {
-        if (_age > 0) _weight--;
+        if (_age > 0) _age--;
       });
       //print('value $_age');
     });
@@ -103,24 +102,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar( 
-        // leading: IconButton(
-        //   icon: Icon(Icons.accessible),
-        //   onPressed: () => Scaffold.of(context).openDrawer(),
-        // ),
-        leading: Icon(FontAwesomeIcons.bars),
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        // leading: IconButton(
-        //   icon: Icon(Icons.accessible),
-        //   onPressed: () => Scaffold.of(context).openDrawer(),
-        // ),
-        // leading: Icon(Icons.),
         centerTitle: true,
         title: Text('BMI CALCULATOR'),
       ),
-      //drawer: Drawer(),
+      drawer: Drawer(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
