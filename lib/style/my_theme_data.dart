@@ -1,5 +1,5 @@
-import 'package:bmi_app/colors.dart';
-import 'package:bmi_app/sizes.dart';
+import 'package:bmi_app/style/colors.dart';
+import 'package:bmi_app/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 ThemeData myThemeData = ThemeData(
@@ -53,14 +53,14 @@ TextStyle _resultHeading4 = TextStyle(
   color: Colors.white,
 );
 
-TextStyle _counterHeading = TextStyle(
+TextStyle _counterHeading1 = TextStyle(
   fontWeight: FontWeight.w500,
   //letterSpacing: Sizes.dimens_1,
   fontSize: Sizes.dimens_20,
   color: AppColors.counterTextColor,
 );
 
-TextStyle _counterNumberHeading = TextStyle(
+TextStyle _counterNumberHeading2 = TextStyle(
   color: Colors.white,
   fontWeight: FontWeight.bold,
   fontSize: Sizes.dimens_50,
