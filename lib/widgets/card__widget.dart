@@ -1,17 +1,15 @@
-import 'package:bmi_app/sizes.dart';
+import 'package:bmi_app/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-import 'colors.dart';
+import '../style/colors.dart';
 
-// ignore: camel_case_types
+
 class CardWidget extends StatelessWidget {
-  // final Color cardColor;
+  
   final Widget cardChild;
   final Function() onPress;
   CardWidget({required this.cardChild, required this.onPress});
-  // cardWidget({
-  //   Key? key, Widget child
-  // }) : super(key: key, child:child);
+  
 
   @override
   Widget build(BuildContext context) {

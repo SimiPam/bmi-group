@@ -1,9 +1,9 @@
-import 'package:bmi_app/sizes.dart';
+import 'package:bmi_app/constants/sizes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'button_bottom.dart';
-import 'colors.dart';
+import '../widgets/button_bottom.dart';
+import '../style/colors.dart';
 
 class ResultPage extends StatefulWidget {
   ResultPage({Key? key}) : super(key: key);

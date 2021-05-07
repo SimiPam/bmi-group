@@ -1,8 +1,8 @@
-import 'package:bmi_app/my_theme_data.dart';
-import 'package:bmi_app/result_page.dart';
+import 'package:bmi_app/style/my_theme_data.dart';
+import 'package:bmi_app/screens/result_page.dart';
 import 'package:flutter/material.dart';
 
-import 'home_page.dart';
+import 'screens/home_page.dart';
 
 void main() {
   runApp(MyApp());

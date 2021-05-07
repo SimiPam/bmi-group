@@ -1,16 +1,16 @@
 import 'dart:async';
 
-import 'package:bmi_app/result_page.dart';
-import 'package:bmi_app/round_button.dart';
-import 'package:bmi_app/sizes.dart';
+import 'package:bmi_app/screens/result_page.dart';
+import 'package:bmi_app/widgets/round_button.dart';
+import 'package:bmi_app/constants/sizes.dart';
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'button_bottom.dart';
-import 'card__widget.dart';
-import 'colors.dart';
-import 'icon_content.dart';
+import '../widgets/button_bottom.dart';
+import '../widgets/card__widget.dart';
+import '../style/colors.dart';
+import '../widgets/icon_content.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key}) : super(key: key);
@@ -22,6 +22,7 @@ class MyHomePage extends StatefulWidget {
 enum Gender { male, female }
 
 class _MyHomePageState extends State<MyHomePage> {
+  
   Gender selectedGender = Gender.male;
   Color activeCardColor = Colors.black;
   Color inActiveCardColor = Colors.grey;
@@ -29,6 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
   late Timer _timer;
   var _weight = 0;
   var _age = 0;
+  int height = 180;
 
   void minusTapp() {
     setState(() {
@@ -101,7 +103,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      
+      appBar: AppBar( 
+        // leading: IconButton(
+        //   icon: Icon(Icons.accessible),
+        //   onPressed: () => Scaffold.of(context).openDrawer(),
+        // ),
+        leading: Icon(FontAwesomeIcons.bars),
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         // leading: IconButton(
@@ -112,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         title: Text('BMI CALCULATOR'),
       ),
-      drawer: Drawer(),
+      //drawer: Drawer(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -158,11 +166,56 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
+          // Expanded(
+          //   //height container
+          //   child: CardWidget(
+          //     onPress: () {},
+          //     cardChild: Column(),
+          //   ),
+          // ),
+
           Expanded(
-            //height container
             child: CardWidget(
+              //  colour: kActiveCardColour,
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text('HEIGHT', style: Theme.of(context).textTheme.caption),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
+                    children: <Widget>[
+                      Text(height.toString(),
+                          style: Theme.of(context).textTheme.bodyText1),
+                      Text('cm', style: Theme.of(context).textTheme.caption),
+                    ],
+                  ),
+                  SliderTheme(
+                    data: SliderTheme.of(context).copyWith(
+                      inactiveTrackColor: Color(0xFF8D8E98),
+                      activeTrackColor: Colors.white,
+                      thumbColor: Color(0xFFEB1555),
+                      overlayColor: Color(0x29EB1555),
+                      thumbShape:
+                          RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                      overlayShape:
+                          RoundSliderOverlayShape(overlayRadius: 30.0),
+                    ),
+                    child: Slider(
+                      value: height.toDouble(),
+                      min: 120.0,
+                      max: 220.0,
+                      onChanged: (double newValue) {
+                        setState(() {
+                          height = newValue.round();
+                        });
+                      },
+                    ),
+                  ),
+                ],
+              ),
               onPress: () {},
-              cardChild: Column(),
             ),
           ),
           Expanded(

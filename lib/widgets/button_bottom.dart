@@ -1,7 +1,7 @@
-import 'package:bmi_app/sizes.dart';
+import 'package:bmi_app/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-import 'colors.dart';
+import '../style/colors.dart';
 
 class BottomButton extends StatelessWidget {
   BottomButton({required this.buttonText, required this.onPress});
