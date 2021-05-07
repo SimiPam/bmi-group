@@ -166,26 +166,17 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          // Expanded(
-          //   //height container
-          //   child: CardWidget(
-          //     onPress: () {},
-          //     cardChild: Column(),
-          //   ),
-          // ),
-
           Expanded(
             child: CardWidget(
-              //  colour: kActiveCardColour,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
+                children: [
                   Text('HEIGHT', style: Theme.of(context).textTheme.caption),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.baseline,
                     textBaseline: TextBaseline.alphabetic,
-                    children: <Widget>[
+                    children: [
                       Text(height.toString(),
                           style: Theme.of(context).textTheme.bodyText1),
                       Text('cm', style: Theme.of(context).textTheme.caption),
@@ -193,19 +184,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
-                      inactiveTrackColor: Color(0xFF8D8E98),
-                      activeTrackColor: Colors.white,
-                      thumbColor: Color(0xFFEB1555),
-                      overlayColor: Color(0x29EB1555),
-                      thumbShape:
-                          RoundSliderThumbShape(enabledThumbRadius: 15.0),
-                      overlayShape:
-                          RoundSliderOverlayShape(overlayRadius: 30.0),
+                      inactiveTrackColor: AppColors.activeTrackColor,
+                      activeTrackColor: AppColors.whiteColor,
+                      thumbColor: AppColors.thumbColor,
+                      overlayColor: AppColors.overlayColor,
+                      thumbShape: RoundSliderThumbShape(
+                          enabledThumbRadius: Sizes.dimens_15),
+                      overlayShape: RoundSliderOverlayShape(
+                          overlayRadius: Sizes.dimens_30),
                     ),
                     child: Slider(
                       value: height.toDouble(),
-                      min: 120.0,
-                      max: 220.0,
+                      min: Sizes.dimens_120,
+                      max: Sizes.dimens_220,
                       onChanged: (double newValue) {
                         setState(() {
                           height = newValue.round();
