@@ -18,7 +18,7 @@ class CardWidget extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.symmetric(
           vertical: Sizes.dimens_10,
-          horizontal: Sizes.dimens_6,
+          horizontal: Sizes.dimens_10,
         ),
         decoration: BoxDecoration(
           color: AppColors.cardColor,
