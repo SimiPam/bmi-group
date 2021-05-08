@@ -103,22 +103,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // leading: IconButton(
-        //   icon: Icon(Icons.accessible),
-        //   onPressed: () => Scaffold.of(context).openDrawer(),
-        // ),
-        leading: Icon(FontAwesomeIcons.bars),
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        // leading: IconButton(
-        //   icon: Icon(Icons.accessible),
-        //   onPressed: () => Scaffold.of(context).openDrawer(),
-        // ),
-        // leading: Icon(Icons.),
         centerTitle: true,
         title: Text('BMI CALCULATOR'),
       ),
-      //drawer: Drawer(),
+      drawer: Drawer(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -164,14 +152,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          // Expanded(
-          //   //height container
-          //   child: CardWidget(
-          //     onPress: () {},
-          //     cardChild: Column(),
-          //   ),
-          // ),
-
           Expanded(
             child: CardWidget(
               cardChild: Column(
