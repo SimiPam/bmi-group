@@ -36,10 +36,10 @@ TextStyle _counterNumberHeading = TextStyle(
 );
 
 TextStyle _resultHeading2 = TextStyle(
-  color: AppColors.whiteColor,
-  fontSize: Sizes.dimens_18,
-  height: 1.5,
-);
+    color: AppColors.whiteColor,
+    fontSize: Sizes.dimens_18,
+    height: 1.5,
+    letterSpacing: Sizes.dimens_1_2);
 
 TextStyle _resultHeading3 = TextStyle(
   color: AppColors.whiteColor,

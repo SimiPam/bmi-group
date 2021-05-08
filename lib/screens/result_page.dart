@@ -28,6 +28,7 @@ class _ResultPageState extends State<ResultPage> {
           Expanded(
             flex: 1,
             child: Container(
+              alignment: Alignment.centerLeft,
               padding: EdgeInsets.symmetric(
                   vertical: Sizes.dimens_15, horizontal: Sizes.dimens_20),
               child: Text(
@@ -69,13 +70,14 @@ class _ResultPageState extends State<ResultPage> {
                       ],
                     ),
                   ),
-
                   RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
                       text: "Normal BMI range:",
-                      style: Theme.of(context).textTheme.headline2!.copyWith(
-                          color: AppColors.bluegreyColor, letterSpacing: 1.2),
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline2!
+                          .copyWith(color: AppColors.bluegreyColor),
                       children: <TextSpan>[
                         TextSpan(
                             text: "\n18,5 - 25 kg/m2",
@@ -83,18 +85,6 @@ class _ResultPageState extends State<ResultPage> {
                       ],
                     ),
                   ),
-                  // Text(
-                  //   "Normal BMI range:",
-                  //   style: Theme.of(context)
-                  //       .textTheme
-                  //       .headline2!
-                  //       .copyWith(color: AppColors.bluegreyColor),
-                  // ),
-                  // Text("18,5 - 25 kg/m2",
-                  //     style: Theme.of(context).textTheme.headline2),
-                  // SizedBox(
-                  //   height: Sizes.dimens_10,
-                  // ),
                   Text("You have a normal body weight. Good job!",
                       textAlign: TextAlign.center,
                       softWrap: true,
@@ -105,8 +95,14 @@ class _ResultPageState extends State<ResultPage> {
                     },
                     child: Container(
                       child: Center(
-                          child: Text('SAVE RESULT',
-                              style: Theme.of(context).textTheme.headline2)),
+                        child: Text(
+                          'SAVE RESULT',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline2!
+                              .copyWith(fontSize: Sizes.dimens_16),
+                        ),
+                      ),
                       color: AppColors.buttonColor,
                       padding: EdgeInsets.all(10),
                       width: double.infinity,
