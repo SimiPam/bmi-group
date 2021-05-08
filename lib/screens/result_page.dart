@@ -47,7 +47,6 @@ class _ResultPageState extends State<ResultPage> {
               padding: EdgeInsets.symmetric(horizontal: Sizes.dimens_70),
               decoration: BoxDecoration(
                 color: AppColors.cardColor,
-                // color: Colors.grey,
                 borderRadius: BorderRadius.circular(Sizes.dimens_10),
               ),
               child: Column(
@@ -90,9 +89,7 @@ class _ResultPageState extends State<ResultPage> {
                           child: Text('SAVE RESULT',
                               style: Theme.of(context).textTheme.headline2)),
                       color: AppColors.buttonColor,
-                      //margin: EdgeInsets.(top: 10),
                       padding: EdgeInsets.all(10),
-                      //     width: 190,
                       width: double.infinity,
                       height: 55,
                     ),
