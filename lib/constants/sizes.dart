@@ -9,6 +9,7 @@ class Sizes {
   static double dimens_16 = 16;
   static double dimens_110 = 110;
   static double dimens_120 = 120;
+  static double dimens_180 = 180;
   static double dimens_220 = 220;
   static double dimens_20 = 20;
   static double dimens_24 = 24;

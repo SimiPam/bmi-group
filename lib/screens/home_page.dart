@@ -37,18 +37,18 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void addTap() {
-    setState(() {
-      _age++;
-    });
-  }
-
   void minusTapDown(TapDownDetails details) {
     _timer = Timer.periodic(Duration(milliseconds: 100), (t) {
       setState(() {
         if (_age > 0) _weight--;
       });
       //print('value $_age');
+    });
+  }
+
+  void addTap() {
+    setState(() {
+      _age++;
     });
   }
 
@@ -61,20 +61,14 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void tapUp() {
-    _timer.cancel();
-  }
-
   void weightMinusTapp() {
     setState(() {
       if (_weight > 0) _weight--;
     });
   }
 
-  void weightAddTap() {
-    setState(() {
-      _weight++;
-    });
+  void tapUp() {
+    _timer.cancel();
   }
 
   void weightMinusTapDown(TapDownDetails details) {
@@ -86,6 +80,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void weightAddTap() {
+    setState(() {
+      _weight++;
+    });
+  }
+
   void weightAddTapDown(TapDownDetails details) {
     _timer = Timer.periodic(Duration(milliseconds: 100), (t) {
       setState(() {
@@ -93,10 +93,6 @@ class _MyHomePageState extends State<MyHomePage> {
       });
       //print('value $_age');
     });
-  }
-
-  void weightTapUp() {
-    _timer.cancel();
   }
 
   @override
@@ -219,7 +215,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 weightMinusTapDown(details);
                               },
                               onTappedUp: (details) {
-                                weightTapUp();
+                                tapUp();
                               },
                             ),
                             SizedBox(width: 15.0),
@@ -230,7 +226,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 weightAddTapDown(details);
                               },
                               onTappedUp: (details) {
-                                weightTapUp();
+                                tapUp();
                               },
                             ),
                           ],
