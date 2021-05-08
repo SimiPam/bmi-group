@@ -14,6 +14,7 @@ class Sizes {
   static double dimens_20 = 20;
   static double dimens_24 = 24;
   static double dimens_25 = 25;
+  static double dimens_28 = 28;
   static double dimens_30 = 30;
   static double dimens_35 = 35;
   static double dimens_4 = 4;

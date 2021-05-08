@@ -31,17 +31,20 @@ TextStyle _counterHeading = TextStyle(
 TextStyle _counterNumberHeading = TextStyle(
   color: AppColors.whiteColor,
   fontWeight: FontWeight.w900,
+  height: 1.3,
   fontSize: Sizes.dimens_50,
 );
 
 TextStyle _resultHeading2 = TextStyle(
   color: AppColors.whiteColor,
   fontSize: Sizes.dimens_18,
+  height: 1.5,
 );
 
 TextStyle _resultHeading3 = TextStyle(
   color: AppColors.whiteColor,
   fontSize: Sizes.dimens_110,
+  height: 1.3,
   fontWeight: FontWeight.w700,
 );
 

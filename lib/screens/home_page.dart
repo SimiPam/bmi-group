@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void minusTapDown(TapDownDetails details) {
     _timer = Timer.periodic(Duration(milliseconds: 100), (t) {
       setState(() {
-        if (_age > 0) _weight--;
+        if (_age > 0) _age--;
       });
       //print('value $_age');
     });
@@ -112,6 +112,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Expanded(
                   //male container
                   child: CardWidget(
+                    color: AppColors.genderCardColor,
+                    edge: EdgeInsets.only(
+                        left: Sizes.dimens_20,
+                        right: Sizes.dimens_4,
+                        top: Sizes.dimens_20,
+                        bottom: Sizes.dimens_20),
                     cardChild: IconContent(
                       rotate: 0,
                       iconColor: selectedGender == Gender.male
@@ -130,6 +136,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Expanded(
                   //female container
                   child: CardWidget(
+                    color: AppColors.genderCardColor,
+                    edge: EdgeInsets.only(
+                        left: Sizes.dimens_4,
+                        right: Sizes.dimens_20,
+                        top: Sizes.dimens_20,
+                        bottom: Sizes.dimens_20),
                     cardChild: IconContent(
                       rotate: 7,
                       iconColor: selectedGender == Gender.female
@@ -150,6 +162,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Expanded(
             child: CardWidget(
+              color: AppColors.cardColor,
+              edge: EdgeInsets.all(Sizes.dimens_20),
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -170,10 +184,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       activeTrackColor: AppColors.whiteColor,
                       thumbColor: AppColors.thumbColor,
                       overlayColor: AppColors.overlayColor,
+                      trackHeight: Sizes.dimens_1,
                       thumbShape: RoundSliderThumbShape(
                           enabledThumbRadius: Sizes.dimens_15),
                       overlayShape: RoundSliderOverlayShape(
-                          overlayRadius: Sizes.dimens_15),
+                          overlayRadius: Sizes.dimens_28),
                     ),
                     child: Slider(
                       value: height.toDouble(),
@@ -188,7 +203,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-              onPress: () {},
             ),
           ),
           Expanded(
@@ -197,7 +211,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Expanded(
                   //weight container
                   child: CardWidget(
-                    onPress: () {},
+                    color: AppColors.cardColor,
+                    edge: EdgeInsets.only(
+                        left: Sizes.dimens_20,
+                        right: Sizes.dimens_4,
+                        top: Sizes.dimens_20,
+                        bottom: Sizes.dimens_20),
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -218,7 +237,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 tapUp();
                               },
                             ),
-                            SizedBox(width: 15.0),
+                            SizedBox(width: Sizes.dimens_15),
                             RoundButton(
                               iconData: Icons.add,
                               onTapped: weightAddTap,
@@ -237,14 +256,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Expanded(
                   //age container
-                  child: Container(
-                    margin: EdgeInsets.symmetric(
-                        vertical: Sizes.dimens_10, horizontal: Sizes.dimens_4),
-                    decoration: BoxDecoration(
-                      color: AppColors.cardColor,
-                      borderRadius: BorderRadius.circular(Sizes.dimens_10),
-                    ),
-                    child: Column(
+                  child: CardWidget(
+                    color: AppColors.cardColor,
+                    edge: EdgeInsets.only(
+                        left: Sizes.dimens_4,
+                        right: Sizes.dimens_20,
+                        top: Sizes.dimens_20,
+                        bottom: Sizes.dimens_20),
+                    cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("Age".toUpperCase(),
@@ -264,7 +283,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 tapUp();
                               },
                             ),
-                            SizedBox(width: 15.0),
+                            SizedBox(width: Sizes.dimens_15),
                             RoundButton(
                               iconData: Icons.add,
                               onTapped: addTap,
