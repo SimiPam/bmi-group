@@ -1,3 +1,5 @@
+import 'package:bmi_app/constants/sizes.dart';
+
 import '../style/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +22,8 @@ class RoundButton extends StatelessWidget {
           shape: BoxShape.circle,
           color: AppColors.counterButtonColor,
         ),
-        width: 50.0,
-        height: 50.0,
+        width: Sizes.dimens_50,
+        height: Sizes.dimens_50,
         child: Icon(
           iconData,
           color: AppColors.counterIconColor,
