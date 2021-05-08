@@ -22,7 +22,6 @@ class MyHomePage extends StatefulWidget {
 enum Gender { male, female }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
   Gender selectedGender = Gender.male;
   Color activeCardColor = Colors.black;
   Color inActiveCardColor = Colors.grey;
@@ -103,8 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-      appBar: AppBar( 
+      appBar: AppBar(
         // leading: IconButton(
         //   icon: Icon(Icons.accessible),
         //   onPressed: () => Scaffold.of(context).openDrawer(),
@@ -176,7 +174,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
           Expanded(
             child: CardWidget(
-              //  colour: kActiveCardColour,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -193,19 +190,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
-                      inactiveTrackColor: Color(0xFF8D8E98),
-                      activeTrackColor: Colors.white,
-                      thumbColor: Color(0xFFEB1555),
-                      overlayColor: Color(0x29EB1555),
-                      thumbShape:
-                          RoundSliderThumbShape(enabledThumbRadius: 15.0),
-                      overlayShape:
-                          RoundSliderOverlayShape(overlayRadius: 30.0),
+                      inactiveTrackColor: AppColors.inactiveIconColor,
+                      activeTrackColor: AppColors.whiteColor,
+                      thumbColor: AppColors.thumbColor,
+                      overlayColor: AppColors.overlayColor,
+                      thumbShape: RoundSliderThumbShape(
+                          enabledThumbRadius: Sizes.dimens_15),
+                      overlayShape: RoundSliderOverlayShape(
+                          overlayRadius: Sizes.dimens_15),
                     ),
                     child: Slider(
                       value: height.toDouble(),
-                      min: 120.0,
-                      max: 220.0,
+                      min: Sizes.dimens_120,
+                      max: Sizes.dimens_220,
                       onChanged: (double newValue) {
                         setState(() {
                           height = newValue.round();

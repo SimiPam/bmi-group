@@ -13,4 +13,6 @@ class AppColors {
   static Color counterButtonColor = Color(0xff1C1F32);
   static Color counterTextColor = Color(0xff868892);
   static Color counterIconColor = Color(0xffA9ABB2);
+  static Color thumbColor = Color(0xFFEB1555);
+  static Color overlayColor = Color(0x29EB1555);
 }

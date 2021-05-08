@@ -28,7 +28,6 @@ class _ResultPageState extends State<ResultPage> {
           Expanded(
             flex: 1,
             child: Container(
-              // margin: EdgeInsets.symmetric(vertical: Sizes.dimens_20, horizontal: Sizes.dimens_30),
               padding: EdgeInsets.symmetric(
                   vertical: Sizes.dimens_15, horizontal: Sizes.dimens_10),
               child: Text(
@@ -98,17 +97,6 @@ class _ResultPageState extends State<ResultPage> {
                       height: 55,
                     ),
                   ),
-                  // Expanded(
-                  //   child: Material(
-                  //     color: AppColors.buttonColor,
-                  //     child: MaterialButton(
-                  //       onPressed: () {},
-                  //       child: Text('Save Result'.toUpperCase(),
-                  //           style: Theme.of(context).textTheme.headline2),
-                  //       minWidth: double.infinity,
-                  //     ),
-                  //   ),
-                  // ),
                 ],
               ),
             ),
